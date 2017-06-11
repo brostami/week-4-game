@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+	<!-- Added link to the jQuery Library -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<!-- Added a link to stylesheets -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Added a link to Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="jumbotron">
+		<h1 class="text-center">Crystals Collector!</h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<p>You will be given a random number at the start of the game.</p>
+						<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+						<p>You win the game by matching your total score to the random number; you lose the game if your total score goes above the random number.</p>
+						<p>The value of each crystal is hidden from you until you click on it.</p>
+						<p>Each time when the game starts, the game will change the values of each crystal.</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h4 class="text-center">Random Number</h4>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div id="random-number"></div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h4 class="text-center">Your total score is</h4>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div id="score"></div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h4 class="text-center">Wins and Losses</h4>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div id="wins-losses"></div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<img src="assets/images/Emerald.png" width="100%">
+					</div>
+				</div>	
+			</div>
+			<div class="col-xs-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<img src="assets/images/Ruby.png" width="100%">
+					</div>
+				</div>	
+			</div>
+			<div class="col-xs-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<img src="assets/images/Sapphire.png" width="100%">
+					</div>
+				</div>	
+			</div>
+			<div class="col-xs-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<img src="assets/images/Topaz.png" width="100%">
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
