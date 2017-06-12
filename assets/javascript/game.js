@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   var randomNumber;
   var totalScore;
+  // Trying out an object
   var winsLosses = {
     wins: 0,
     losses: 0,
@@ -20,32 +21,33 @@ $(document).ready(function() {
     return Math.floor(Math.random() * (max - min + 1)) + min; 
   }
 
+  // Reset game function
   function resetGame() {
     randomNumber = getRandomNumber(19, 120);
     $('#random-number').html(randomNumber);
-    console.log("Random number is " + $('#random-number').html())
-    console.log(randomNumber);
     gem1 = getRandomNumber(1, 12);
     gem2 = getRandomNumber(1, 12);
     gem3 = getRandomNumber(1, 12);
     gem4 = getRandomNumber(1, 12);
-    console.log(gem1, gem2, gem3, gem4);
     $("#gem1").data('randomValue', gem1);
     $("#gem2").data('randomValue', gem2);
     $("#gem3").data('randomValue', gem3);
     $("#gem4").data('randomValue', gem4);
-    // console.log($("#gem1").data('randomValue'));
     totalScore = 0;
     $('#wins-losses').html("<p>" + winsLosses.message + "<p>" + 
       "<p>Wins: " + winsLosses.wins + "</p>" + 
       "<p>Losses: " + winsLosses.losses + "</p>" );
-    console.log("Message is: " + winsLosses.message);
+
+    // Console log values
+    console.log("Message: " + winsLosses.message);
     console.log("Wins: " + winsLosses.wins);
     console.log("Losses: " + winsLosses.losses);
+    console.log("New random number: " + randomNumber);
+    console.log("Random number in html: " + $('#random-number').html());
+    console.log("Gem values: " + gem1, gem2, gem3, gem4);
   }
 
-  resetGame();
-
+  // End game function
   function endGame() {
     if (outcome === true) {
       winsLosses.wins++;
@@ -58,6 +60,8 @@ $(document).ready(function() {
       resetGame();
     }
   }
+
+  resetGame();
 
   $(".gem").on("click", function() {
     var gemValue = parseInt($(this).data('randomValue'));
@@ -72,7 +76,6 @@ $(document).ready(function() {
       endGame();
     }
     $('#score').html(totalScore);
-    console.log("Total Score is " + totalScore);
+    console.log("Total Score: " + totalScore);
     });
-
 });
